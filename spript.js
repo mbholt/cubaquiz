@@ -105,6 +105,10 @@ const saveScoreBtn = document.getElementById('save-score');
 const viewScoresBtn = document.getElementById('view-scores');
 const clearScoresBtn = document.getElementById('clear-scores');
 
+// animated background width
+const wrap = document.querySelector('.wrap');
+wrap.style.width = document.body.innerWidth;
+
 // correct and incorrect responses
 const correctAnswer = '<p>You answered correctly!</p>';
 const incorrectAnswer = '<p>You answered <em>in</em>correctly!</p>';

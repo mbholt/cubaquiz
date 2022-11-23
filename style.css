@@ -5,7 +5,6 @@
 body {
     background: linear-gradient(#6084d7 25%, #a2cef4 50%, #a2cef4 50%, #6084d7 100%);
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
 #cuba-canvas {
@@ -103,6 +102,7 @@ audio {
 .sidenav {
     margin-top: 20%;
     height: 100%;
+    z-index: 1;
 }
 
 .sidenav #timer {
@@ -133,12 +133,14 @@ audio {
     background-position: -1px -1px,-1px -1px;
     transform: rotateX(85deg);
     animation: planeMoveTop 2s infinite linear;
+    z-index: -1;
 }
   
 .bottom-plane {
     transform: rotateX(-85deg);
     top: -30%;
     animation: planeMoveBot 2s infinite linear;
+    z-index: -1;
 }
   
 @keyframes planeMoveTop {
@@ -166,17 +168,32 @@ audio {
 }
 
 @media only screen and (max-width: 768px) {
+    .container-fluid {
+        scale: 85%;
+    }
+
     .sidenav {
         height: auto;
         margin-top: 5px;
         padding: 5px;
+        justify-content: center;
+    }
+
+    #timer {
+        position: fixed;
+        left: 8%;
+        bottom: 92%;
     }
 
     .wrap {
         perspective: 210px;
       }
 
-    .row.content {height:auto;} 
+    .row.content {
+        margin-top: 15%;
+        height:auto;
+        justify-content: center;
+    } 
 
     [class*="col-"] {
         width: 100%;
