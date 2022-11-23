@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Ultimate Cuba Gooding Jr Quiz</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="./spript.js" defer></script>
+
+</head>
+<body>
+
+<canvas class="invisible" id="cuba-canvas"></canvas>
+
+<div class="container-fluid text-center">
+    <div class='wrap'>
+        <div class='top-plane'></div>
+        <div class='bottom-plane'></div>
+    </div>
+
+    <div class="row content">
+            <div class="col-sm-2 sidenav">
+                <div class="invisible" id="timer"></div>
+            </div>
+
+            <div class="col-sm-8"> 
+                <div class="quiz-container" id="landing">
+                    <div class="landing-page">
+                        <h1>Cuba Qs</h1>
+                        <h2>So you think you know <em>everything</em> there is to know about Cuba Gooding Jr?</h2>
+                        <p><em>We'll see about that...</em></p>
+                        <button class="btn btn-block shadow-none" id="start">Start The Quiz!</button>
+                    </div>
+                </div>
+
+                <div class="quiz-container invisible" id="quiz">
+                    <div class="quiz-header">
+                        <h2 id="question"></h2>
+                    </div>
+                    <div class="answer-container">
+                        <ul>
+                            <li>
+                                <button type="button" class="btn btn-lg btn-block answer shadow-none" id="a"></button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn btn-lg btn-block answer shadow-none" id="b"></button>                    
+                            </li>
+                            <li>
+                                <button type="button" class="btn btn-lg btn-block answer shadow-none" id="c"></button>                    
+                            </li>
+                            <li>
+                                <button type="button" class="btn btn-lg btn-block answer shadow-none" id="d"></button>                    
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="message"></div>
+                </div>
+
+                <div class="quiz-container invisible" id="game-over">
+                    <h2 id="your-score"></h2>
+                    <form id="player-name-form">
+                        <input name="playername" id="playername" type="text" autofocus="true" class="form-input" placeholder="Enter Your Name" />
+                        <button type="button" class="btn" id="save-score">Save Score</button>
+                    </form>
+                    <div id="game-over-btns">
+                        <button type="button" class="btn btn-lg btn-block" onclick='location.reload()'>Play Again?</button>
+                        <button type="button" class="btn btn-lg btn-block" id="view-scores">View Score Board</button>
+                        <button type="button" class="btn btn-lg btn-block" onClick="parent.open('https://en.wikipedia.org/wiki/Cuba_Gooding_Jr.')">Learn More About Cuba Gooding Jr</button>
+                    </div>
+                </div>
+
+                <div class="quiz-container invisible" id="high-scores">
+                    <h1>C<u>uba Gooding Jr Leaderboar</u>d</h1>
+                    <div id="scores-chart"></div>
+                    <h3 class="invisible" id="no-scores"><i>No scores have been saved yet.</i></h3>
+                    <button type="button" class="btn btn-lg btn-block" id="clear-scores">Clear High Scores</button>  
+                    <button type="button" class="btn btn-lg btn-block" onclick='location.reload()'>Play Again?</button>
+                </div>
+            </div>
+
+            <div class="col-sm-2 sidenav">
+                <audio controls id="audio">
+                    <source src="CubaShort.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>
