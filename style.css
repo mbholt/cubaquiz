@@ -5,6 +5,7 @@
 body {
     background: linear-gradient(#6084d7 25%, #a2cef4 50%, #a2cef4 50%, #6084d7 100%);
     font-family: Arial, Helvetica, sans-serif;
+    width: auto;
 }
 
 #cuba-canvas {
@@ -70,6 +71,7 @@ ul li {
   -webkit-box-shadow: none;
           box-shadow: none;
    outline: none !important;
+   -webkit-tap-highlight-color: transparent;
 }
 
 #message {
@@ -187,7 +189,7 @@ audio {
 
     .wrap {
         perspective: 210px;
-      }
+    }
 
     .row.content {
         margin-top: 15%;
@@ -197,5 +199,5 @@ audio {
 
     [class*="col-"] {
         width: 100%;
-      }
+    }
 }
