@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    outline: none;
 }
 
 body {
@@ -170,6 +171,7 @@ audio {
 }
 
 @media only screen and (max-width: 768px) {
+
     .container-fluid {
         scale: 85%;
     }
@@ -184,7 +186,7 @@ audio {
     #timer {
         position: fixed;
         left: 8%;
-        bottom: 92%;
+        bottom: 80%;
     }
 
     .wrap {
